@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada · Psicantil</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:     #F5F0E8;
+  --paper2:    #EDE8DF;
+  --card:      #FFFFFF;
+  --g0:        #16B05A;
+  --g1:        #20C96A;
+  --g2:        #0C7A3D;
+  --g-light:   #B2F0CE;
+  --g-pale:    #DCF5EB;
+  --coral:     #FF3D5A;
+  --sun:       #FFA800;
+  --sky:       #0088BB;
+  --lav:       #7C3AED;
+  --peach:     #FF6A30;
+  --ink:       #1A1208;
+  --ink2:      #3D3020;
+  --ink3:      #6B5C44;
+  --border:    rgba(26,18,8,.10);
+  --shadow:    rgba(26,18,8,.07);
+  --shadow-m:  rgba(26,18,8,.13);
+  --shadow-lg: rgba(26,18,8,.18);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:700;height:68px;
+  padding:0 52px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(245,240,232,.90);
+  backdrop-filter:blur(24px) saturate(1.8);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 20px var(--shadow);
+}
+.logo{
+  font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;
+  letter-spacing:-.05em;text-decoration:none;
+  display:flex;align-items:center;gap:5px;
+  color:var(--ink);
+}
+.logo-word{
+  background:linear-gradient(135deg,var(--g2),var(--g0),#22D472);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.logo-dot{
+  width:9px;height:9px;border-radius:50%;background:var(--coral);
+  display:inline-block;flex-shrink:0;
+  box-shadow:0 0 0 2px white,0 0 8px rgba(255,64,96,.4);
+  animation:dotPulse 2.4s ease-in-out infinite;
+  -webkit-text-fill-color:initial;
+}
+@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.7)}}
+
+.nav-links{display:flex;gap:8px;align-items:center}
+.npill{
+  padding:8px 20px;border-radius:50px;
+  border:1.5px solid var(--border);
+  background:transparent;
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;
+  color:var(--ink2);text-decoration:none;
+  transition:all .22s;
+}
+.npill:hover{border-color:var(--g0);color:var(--g0);background:var(--g-pale)}
+.npill.solid{
+  background:var(--g0);border-color:var(--g0);color:white;
+  box-shadow:0 4px 16px rgba(24,184,96,.3);
+}
+.npill.solid:hover{background:var(--g2);border-color:var(--g2);box-shadow:0 6px 24px rgba(14,143,70,.35)}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:15px 34px;border-radius:50px;
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:.94rem;
+  border:2px solid transparent;
+  transition:all .25s;position:relative;overflow:hidden;
+}
+.btn::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.35) 50%,transparent 62%);
+  transform:translateX(-120%);transition:transform .55s;
+}
+.btn:hover::after{transform:translateX(120%)}
+.btn-g{
+  background:linear-gradient(135deg,var(--g1),var(--g0));
+  color:white;border-color:var(--g0);
+  box-shadow:0 6px 24px rgba(24,184,96,.3),0 2px 8px rgba(24,184,96,.2);
+}
+.btn-g:hover{box-shadow:0 10px 36px rgba(24,184,96,.4),0 4px 16px rgba(24,184,96,.25);transform:translateY(-3px)}
+.btn-outline{
+  border-color:var(--border);color:var(--ink);background:var(--card);
+  box-shadow:0 2px 12px var(--shadow);
+}
+.btn-outline:hover{border-color:var(--g0);color:var(--g0);box-shadow:0 6px 20px var(--shadow-m);transform:translateY(-3px)}
+
+/* ── FOOTER ── */
+footer{
+  background:linear-gradient(135deg,#1A3828,#0F2018);
+  padding:52px 60px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
+}
+.fl{
+  font-family:'Fraunces',serif;font-size:1.9rem;font-weight:900;
+  letter-spacing:-.05em;
+  background:linear-gradient(90deg,var(--g1),#7EEAB0);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.fl-sub{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:4px}
+.fr{text-align:right;font-size:.76rem;color:rgba(255,255,255,.22)}
+.fr a{color:var(--g-light);text-decoration:none}
+
+/* ── 404 ── */
+.notfound{
+  min-height:calc(100vh - 68px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 32px 80px;
+  background:var(--paper);
+}
+.notfound-num{
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  font-size:clamp(6rem,20vw,14rem);
+  line-height:1;
+  letter-spacing:-.06em;
+  background:linear-gradient(135deg,var(--g2),var(--g0),#22D472);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:8px;
+}
+.notfound-title{
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  color:var(--ink);
+  letter-spacing:-.04em;
+  margin-bottom:16px;
+}
+.notfound-sub{
+  font-size:1rem;
+  color:var(--ink2);
+  line-height:1.8;
+  max-width:420px;
+  margin-bottom:44px;
+}
+.notfound-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  nav{padding:0 24px}
+  footer{padding:40px 28px}
+}
+@media(max-width:640px){
+  .nav-links .npill:not(.solid){display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="logo" href="/">
+    <span class="logo-word">Psic</span><span class="logo-dot"></span><span class="logo-word">antil</span>
+  </a>
+  <div class="nav-links">
+    <a class="npill" href="/#blog">Blog</a>
+    <a class="npill" href="/#sobre">Sobre mí</a>
+    <a class="npill" href="/#suscribir">Suscríbete</a>
+    <a class="npill solid" href="/admin">⚙ Admin</a>
+  </div>
+</nav>
+
+<div class="notfound">
+  <svg width="80" height="80" viewBox="0 0 50 50" fill="none" style="margin-bottom:24px;opacity:.4">
+    <circle cx="25" cy="25" r="23" stroke="#16B05A" stroke-width="1.5" fill="none"/>
+    <path d="M25 6 Q17 16 17 26 Q17 40 25 44 Q33 40 33 26 Q33 16 25 6Z" fill="#16B05A" opacity=".7"/>
+    <path d="M25 6 Q25 30 19 42" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M25 24 Q31 28 33 36" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <div class="notfound-num">404</div>
+  <h1 class="notfound-title">Esta página se ha perdido</h1>
+  <p class="notfound-sub">
+    Como un niño explorando, a veces nos perdemos por el camino.
+    Vuelve al inicio y encontrarás todo lo que buscas.
+  </p>
+
+  <div class="notfound-actions">
+    <a href="/" class="btn btn-g" style="text-decoration:none">
+      Volver al inicio
+      <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M5 10v10h5v-6h4v6h5V10"/>
+      </svg>
+    </a>
+    <a href="/posts/" class="btn btn-outline" style="text-decoration:none">
+      Ver el blog
+    </a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div>
+    <div class="fl">Psicantil</div>
+    <div class="fl-sub">Psicología Infantil · Cristina Góngora González</div>
+  </div>
+  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="opacity:.35">
+    <circle cx="25" cy="25" r="23" stroke="#22D472" stroke-width="1.5" fill="none"/>
+    <path d="M25 6 Q17 16 17 26 Q17 40 25 44 Q33 40 33 26 Q33 16 25 6Z" fill="#22D472" opacity=".7"/>
+    <path d="M25 6 Q25 30 19 42" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M25 24 Q31 28 33 36" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </svg>
+  <div class="fr">
+    <p>© <span id="footer-year">2025</span> Psicantil · <a href="https://psicantil.com" style="color:inherit;text-decoration:none">psicantil.com</a></p>
+    <p style="margin-top:5px"><a href="/privacidad.html">Política de privacidad</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
