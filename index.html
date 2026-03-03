@@ -44,7 +44,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Kaushan+Script&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ══════════════════════════════════════
    PSICANTIL v7 — PARCHMENT LIGHT EDITION
@@ -63,6 +63,7 @@
   --coral:     #FF3D5A;      /* vivid coral */
   --sun:       #FFA800;      /* amber-gold */
   --sky:       #0088BB;      /* sky blue */
+  --turq:      #2CBCB3;      /* turquoise */
   --lav:       #7C3AED;      /* violet */
   --peach:     #FF6A30;      /* peach */
   --ink:       #1A1208;      /* near-black with warm undertone */
@@ -115,21 +116,9 @@ nav{
   box-shadow:0 1px 20px var(--shadow);
 }
 .logo{
-  font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;
-  letter-spacing:-.05em;text-decoration:none;cursor:none;
-  display:flex;align-items:center;gap:5px;
+  font-family:'Kaushan Script',cursive;font-weight:400;font-size:1.8rem;
+  letter-spacing:-.02em;text-decoration:none;cursor:none;
   color:var(--ink);
-}
-.logo-word{
-  background:linear-gradient(135deg,var(--g2),var(--g0),#22D472);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.logo-dot{
-  width:9px;height:9px;border-radius:50%;background:var(--coral);
-  display:inline-block;flex-shrink:0;
-  box-shadow:0 0 0 2px white,0 0 8px rgba(255,64,96,.4);
-  animation:dotPulse 2.4s ease-in-out infinite;
-  -webkit-text-fill-color:initial;
 }
 @keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.7)}}
 
@@ -192,7 +181,7 @@ nav{
 }
 .hero-h1 .shine{
   font-style:italic;
-  background:linear-gradient(90deg,var(--g0) 0%,#22D472 35%,var(--sky) 70%,var(--g0) 100%);
+  background:linear-gradient(90deg,var(--turq) 0%,#22D472 35%,var(--sky) 70%,var(--turq) 100%);
   background-size:220% auto;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   animation:shimmer 3.2s linear infinite;
@@ -281,10 +270,10 @@ nav{
 .marquee{
   position:relative;z-index:3;overflow:hidden;white-space:nowrap;
   padding:13px 0;
-  background:var(--g0);
-  border-top:2px solid rgba(14,143,70,.3);
-  border-bottom:2px solid rgba(14,143,70,.3);
-  box-shadow:0 4px 24px rgba(24,184,96,.18);
+  background:linear-gradient(90deg,var(--turq),#28A89F);
+  border-top:2px solid rgba(44,188,179,.3);
+  border-bottom:2px solid rgba(44,188,179,.3);
+  box-shadow:0 4px 24px rgba(44,188,179,.18);
 }
 .marquee-track{display:inline-flex;animation:scroll 26s linear infinite}
 .marquee-track span{
@@ -526,7 +515,7 @@ nav{
 }
 .sub-h em{
   font-style:italic;
-  background:linear-gradient(90deg,var(--g0) 0%,#22D472 40%,var(--sky) 80%,var(--g0) 100%);
+  background:linear-gradient(90deg,var(--turq) 0%,#22D472 40%,var(--sky) 80%,var(--turq) 100%);
   background-size:220% auto;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   animation:shimmer 3s linear infinite;
@@ -562,9 +551,9 @@ footer{
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
 }
 .fl{
-  font-family:'Fraunces',serif;font-size:1.9rem;font-weight:900;
-  letter-spacing:-.05em;
-  background:linear-gradient(90deg,var(--g1),#7EEAB0);
+  font-family:'Kaushan Script',cursive;font-size:2.1rem;font-weight:400;
+  letter-spacing:-.02em;
+  background:linear-gradient(90deg,var(--turq),#7EEAB0);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .fl-sub{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:4px}
@@ -638,9 +627,7 @@ footer{
 
 <!-- ══ NAV ══ -->
 <nav>
-  <a class="logo" href="/">
-    <span class="logo-word">Psic</span><span class="logo-dot"></span><span class="logo-word">antil</span>
-  </a>
+  <a class="logo" href="/">Psicantil</a>
   <div class="nav-links">
     <a class="npill" href="#blog">Blog</a>
     <a class="npill" href="#sobre">Sobre mí</a>

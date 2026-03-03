@@ -8,7 +8,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=Kaushan+Script&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --paper:     #F5F0E8;
@@ -53,21 +53,9 @@ nav{
   box-shadow:0 1px 20px var(--shadow);
 }
 .logo{
-  font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;
-  letter-spacing:-.05em;text-decoration:none;
-  display:flex;align-items:center;gap:5px;
+  font-family:'Kaushan Script',cursive;font-weight:400;font-size:1.8rem;
+  letter-spacing:-.02em;text-decoration:none;
   color:var(--ink);
-}
-.logo-word{
-  background:linear-gradient(135deg,var(--g2),var(--g0),#22D472);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.logo-dot{
-  width:9px;height:9px;border-radius:50%;background:var(--coral);
-  display:inline-block;flex-shrink:0;
-  box-shadow:0 0 0 2px white,0 0 8px rgba(255,64,96,.4);
-  animation:dotPulse 2.4s ease-in-out infinite;
-  -webkit-text-fill-color:initial;
 }
 @keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.7)}}
 
@@ -120,9 +108,9 @@ footer{
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
 }
 .fl{
-  font-family:'Fraunces',serif;font-size:1.9rem;font-weight:900;
-  letter-spacing:-.05em;
-  background:linear-gradient(90deg,var(--g1),#7EEAB0);
+  font-family:'Kaushan Script',cursive;font-size:2.1rem;font-weight:400;
+  letter-spacing:-.02em;
+  background:linear-gradient(90deg,#2CBCB3,#7EEAB0);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .fl-sub{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:4px}
@@ -188,9 +176,7 @@ footer{
 
 <!-- ══ NAV ══ -->
 <nav>
-  <a class="logo" href="/">
-    <span class="logo-word">Psic</span><span class="logo-dot"></span><span class="logo-word">antil</span>
-  </a>
+  <a class="logo" href="/">Psicantil</a>
   <div class="nav-links">
     <a class="npill" href="/#blog">Blog</a>
     <a class="npill" href="/#sobre">Sobre mí</a>
