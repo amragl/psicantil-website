@@ -4,6 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Psicantil — Psicología Infantil · Cristina Góngora González</title>
+<meta name="description" content="Psicantil es un blog de psicología infantil escrito por Cristina Góngora González. Artículos sobre apego seguro, rabietas, desarrollo del lenguaje y crianza consciente para padres y madres.">
+<meta name="author" content="Cristina Góngora González">
+<link rel="canonical" href="https://psicantil.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Psicantil">
+<meta property="og:title" content="Psicantil — Psicología Infantil · Cristina Góngora González">
+<meta property="og:description" content="Artículos sobre apego seguro, rabietas, desarrollo del lenguaje y crianza consciente. Psicología infantil accesible, honesta y útil.">
+<meta property="og:url" content="https://psicantil.com/">
+<meta property="og:image" content="https://psicantil.com/assets/og-image.png">
+<meta property="og:locale" content="es_ES">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Psicantil — Psicología Infantil">
+<meta name="twitter:description" content="Artículos sobre apego seguro, rabietas, desarrollo del lenguaje y crianza consciente.">
+<meta name="twitter:image" content="https://psicantil.com/assets/og-image.png">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Psicantil",
+  "url": "https://psicantil.com",
+  "description": "Blog de psicología infantil escrito por Cristina Góngora González.",
+  "author": {
+    "@type": "Person",
+    "name": "Cristina Góngora González",
+    "jobTitle": "Psicóloga · Especialista en Psicología Infantil",
+    "url": "https://psicantil.com/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Psicantil",
+    "url": "https://psicantil.com"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -600,14 +638,14 @@ footer{
 
 <!-- ══ NAV ══ -->
 <nav>
-  <a class="logo" href="#">
+  <a class="logo" href="/">
     <span class="logo-word">Psic</span><span class="logo-dot"></span><span class="logo-word">antil</span>
   </a>
   <div class="nav-links">
     <a class="npill" href="#blog">Blog</a>
     <a class="npill" href="#sobre">Sobre mí</a>
     <a class="npill" href="#suscribir">Suscríbete</a>
-    <a class="npill solid" onclick="alert('Panel de administración — próximamente')">⚙ Admin</a>
+    <a class="npill solid" href="/admin">⚙ Admin</a>
   </div>
 </nav>
 
@@ -871,12 +909,12 @@ footer{
       </div>
       <h2 class="sh2" style="margin-top:8px">El blog de<br><em>Cristina</em></h2>
     </div>
-    <button class="see-all">Ver todos ↗</button>
+    <a class="see-all" href="/posts/">Ver todos ↗</a>
   </div>
 
   <div class="blog-grid">
     <!-- Big card: Language -->
-    <div class="bc big rev" onclick="openPost(0)" style="transition-delay:.05s;cursor:none">
+    <div class="bc big rev" onclick="openPost(0)" data-href="/posts/desarrollo-lenguaje.html" style="transition-delay:.05s;cursor:none">
       <div class="bc-art" style="background:linear-gradient(135deg,#D4F5E4,#A8EEC8,#6EDBA0)">
         <svg width="220" height="200" viewBox="0 0 220 200" fill="none">
           <rect x="16" y="16" width="112" height="78" rx="20" fill="white" opacity=".75" stroke="rgba(14,143,70,.2)" stroke-width="1.5"/>
@@ -906,7 +944,7 @@ footer{
     </div>
 
     <!-- Card 2: Apego -->
-    <div class="bc rev" onclick="openPost(1)" style="transition-delay:.15s;cursor:none">
+    <div class="bc rev" onclick="openPost(1)" data-href="/posts/apego-seguro.html" style="transition-delay:.15s;cursor:none">
       <div class="bc-art" style="background:linear-gradient(135deg,#EDE0FF,#C4B0F8,#9B72F5)">
         <svg width="150" height="160" viewBox="0 0 150 160" fill="none">
           <circle cx="52" cy="58" r="28" fill="white" opacity=".65" stroke="rgba(139,92,246,.2)" stroke-width="1.5"/>
@@ -928,7 +966,7 @@ footer{
     </div>
 
     <!-- Card 3: Rabieta -->
-    <div class="bc rev" onclick="openPost(2)" style="transition-delay:.25s;cursor:none">
+    <div class="bc rev" onclick="openPost(2)" data-href="/posts/rabietas.html" style="transition-delay:.25s;cursor:none">
       <div class="bc-art" style="background:linear-gradient(135deg,#FFE8D0,#FFCB99,#FF9A5C)">
         <svg width="150" height="160" viewBox="0 0 150 160" fill="none">
           <ellipse cx="75" cy="68" rx="48" ry="33" fill="white" opacity=".65" stroke="rgba(255,115,64,.25)" stroke-width="1.5"/>
@@ -1024,7 +1062,7 @@ footer{
       <a class="schip" href="https://www.instagram.com/psicantil/" target="_blank">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>Instagram
       </a>
-      <a class="schip" href="#" target="_blank">
+      <a class="schip" href="https://www.linkedin.com/in/cristina-gongora-gonzalez" target="_blank" rel="noopener noreferrer">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
       </a>
     </div>
@@ -1059,8 +1097,8 @@ footer{
     <path d="M25 24 Q31 28 33 36" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
   </svg>
   <div class="fr">
-    <p>© 2025 Psicantil · psicantil.com</p>
-    <p style="margin-top:5px"><a href="#">Política de privacidad</a></p>
+    <p>© <span id="footer-year">2025</span> Psicantil · <a href="https://psicantil.com" style="color:inherit;text-decoration:none">psicantil.com</a></p>
+    <p style="margin-top:5px"><a href="/privacidad.html">Política de privacidad</a></p>
   </div>
 </footer>
 
@@ -1148,6 +1186,16 @@ function openPost(i){
       <button class="sbtn sfb" onclick="shr('facebook')">Facebook</button>
       <button class="sbtn sli" onclick="shr('linkedin')">LinkedIn</button>
       <button class="sbtn sig" onclick="shr('instagram')">Instagram</button>
+    </div>
+    <div style="text-align:center;margin-top:32px;padding-top:28px;border-top:1.5px solid var(--border)">
+      <a href="/posts/${['desarrollo-lenguaje','apego-seguro','rabietas'][i]}.html"
+         class="btn btn-g"
+         style="display:inline-flex;text-decoration:none">
+        Leer artículo completo
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
     </div>`;
   document.getElementById('modal').style.display='block';
   document.body.style.overflow='hidden';
@@ -1155,7 +1203,7 @@ function openPost(i){
 function closePost(){document.getElementById('modal').style.display='none';document.body.style.overflow='';}
 document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closePost()});
 function shr(n){
-  if(n==='instagram'){alert('Comparte el enlace desde la app de Instagram o usa Buffer/Later.');return;}
+  if(n==='instagram'){navigator.clipboard.writeText('https://psicantil.com').then(()=>{const b=event.target;b.textContent='¡Enlace copiado!';setTimeout(()=>b.textContent='Instagram',2000)});return;}
   window.open(n==='facebook'?`https://www.facebook.com/sharer/?u=${encodeURIComponent('https://psicantil.com')}`:`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://psicantil.com')}`,'_blank','width=600,height=400');
 }
 function handleSub(e){
@@ -1164,6 +1212,7 @@ function handleSub(e){
   b.textContent='¡Suscrito! ✓';b.style.background='linear-gradient(135deg,#22D472,#18B860)';
   setTimeout(()=>{b.textContent='Suscribirme ✓';b.style.background='';e.target.reset();},3000);
 }
+document.getElementById('footer-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

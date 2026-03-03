@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog · Psicantil — Psicología Infantil</title>
+<meta name="description" content="Todas las entradas del blog de Psicantil. Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente por Cristina Góngora González.">
+<link rel="canonical" href="https://psicantil.com/posts/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Psicantil">
+<meta property="og:title" content="Blog · Psicantil — Psicología Infantil">
+<meta property="og:description" content="Todas las entradas del blog de Psicantil. Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente.">
+<meta property="og:url" content="https://psicantil.com/posts/">
+<meta property="og:image" content="https://psicantil.com/assets/og-image.png">
+<meta property="og:locale" content="es_ES">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog · Psicantil">
+<meta name="twitter:description" content="Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente.">
+<meta name="twitter:image" content="https://psicantil.com/assets/og-image.png">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de Psicantil",
+  "url": "https://psicantil.com/posts/",
+  "description": "Artículos de psicología infantil por Cristina Góngora González.",
+  "author": {
+    "@type": "Person",
+    "name": "Cristina Góngora González"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Psicantil",
+    "url": "https://psicantil.com"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:     #F5F0E8;
+  --paper2:    #EDE8DF;
+  --card:      #FFFFFF;
+  --g0:        #16B05A;
+  --g1:        #20C96A;
+  --g2:        #0C7A3D;
+  --g-light:   #B2F0CE;
+  --g-pale:    #DCF5EB;
+  --coral:     #FF3D5A;
+  --sun:       #FFA800;
+  --sky:       #0088BB;
+  --lav:       #7C3AED;
+  --peach:     #FF6A30;
+  --ink:       #1A1208;
+  --ink2:      #3D3020;
+  --ink3:      #6B5C44;
+  --border:    rgba(26,18,8,.10);
+  --shadow:    rgba(26,18,8,.07);
+  --shadow-m:  rgba(26,18,8,.13);
+  --shadow-lg: rgba(26,18,8,.18);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:700;height:68px;
+  padding:0 52px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(245,240,232,.90);
+  backdrop-filter:blur(24px) saturate(1.8);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 20px var(--shadow);
+}
+.logo{
+  font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;
+  letter-spacing:-.05em;text-decoration:none;
+  display:flex;align-items:center;gap:5px;
+  color:var(--ink);
+}
+.logo-word{
+  background:linear-gradient(135deg,var(--g2),var(--g0),#22D472);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.logo-dot{
+  width:9px;height:9px;border-radius:50%;background:var(--coral);
+  display:inline-block;flex-shrink:0;
+  box-shadow:0 0 0 2px white,0 0 8px rgba(255,64,96,.4);
+  animation:dotPulse 2.4s ease-in-out infinite;
+  -webkit-text-fill-color:initial;
+}
+@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.7)}}
+
+.nav-links{display:flex;gap:8px;align-items:center}
+.npill{
+  padding:8px 20px;border-radius:50px;
+  border:1.5px solid var(--border);
+  background:transparent;
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;
+  color:var(--ink2);text-decoration:none;
+  transition:all .22s;
+}
+.npill:hover{border-color:var(--g0);color:var(--g0);background:var(--g-pale)}
+.npill.solid{
+  background:var(--g0);border-color:var(--g0);color:white;
+  box-shadow:0 4px 16px rgba(24,184,96,.3);
+}
+.npill.solid:hover{background:var(--g2);border-color:var(--g2);box-shadow:0 6px 24px rgba(14,143,70,.35)}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:15px 34px;border-radius:50px;
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:.94rem;
+  border:2px solid transparent;
+  transition:all .25s;position:relative;overflow:hidden;
+}
+.btn::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.35) 50%,transparent 62%);
+  transform:translateX(-120%);transition:transform .55s;
+}
+.btn:hover::after{transform:translateX(120%)}
+.btn-g{
+  background:linear-gradient(135deg,var(--g1),var(--g0));
+  color:white;border-color:var(--g0);
+  box-shadow:0 6px 24px rgba(24,184,96,.3),0 2px 8px rgba(24,184,96,.2);
+}
+.btn-g:hover{box-shadow:0 10px 36px rgba(24,184,96,.4),0 4px 16px rgba(24,184,96,.25);transform:translateY(-3px)}
+.btn-outline{
+  border-color:var(--border);color:var(--ink);background:var(--card);
+  box-shadow:0 2px 12px var(--shadow);
+}
+.btn-outline:hover{border-color:var(--g0);color:var(--g0);box-shadow:0 6px 20px var(--shadow-m);transform:translateY(-3px)}
+
+/* ── TAGS ── */
+.tag{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:6px 16px;border-radius:50px;
+  font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;
+  border:1.5px solid currentColor;margin-bottom:18px;
+}
+.tg{color:var(--g0);background:var(--g-pale)}
+.tc{color:var(--coral);background:rgba(255,64,96,.07)}
+
+.sh2{
+  font-family:'Fraunces',serif;font-weight:900;
+  font-size:clamp(2.4rem,3.8vw,3.8rem);
+  line-height:.97;letter-spacing:-.05em;color:var(--ink);
+}
+.sh2 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--g0),#22D472);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* ── BLOG INDEX ── */
+.blog-index{
+  padding:140px 60px 100px;
+  max-width:1260px;margin:0 auto;
+}
+.blog-index-hdr{margin-bottom:52px}
+
+.blog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+
+.bc{
+  border-radius:24px;overflow:hidden;
+  background:var(--card);border:1.5px solid var(--border);
+  box-shadow:0 4px 20px var(--shadow);
+  transition:transform .28s,box-shadow .28s;
+  position:relative;text-decoration:none;color:inherit;display:block;
+}
+.bc:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px var(--shadow-lg);
+}
+.bc-art{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;height:190px}
+.bc-art::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(255,255,255,.25));
+}
+.bc-body{padding:26px}
+.bc-tag{font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.bc-tag.tg-g{color:var(--g0)}.bc-tag.tg-lv{color:var(--lav)}.bc-tag.tg-co{color:var(--coral)}
+.bc-title{
+  font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;
+  color:var(--ink);line-height:1.32;margin-bottom:10px;letter-spacing:-.02em;
+}
+.bc-exc{font-size:.84rem;line-height:1.7;color:var(--ink2);margin-bottom:16px}
+.bc-meta{display:flex;gap:14px;font-size:.73rem;color:var(--ink3)}
+
+/* ── FOOTER ── */
+footer{
+  background:linear-gradient(135deg,#1A3828,#0F2018);
+  padding:52px 60px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
+}
+.fl{
+  font-family:'Fraunces',serif;font-size:1.9rem;font-weight:900;
+  letter-spacing:-.05em;
+  background:linear-gradient(90deg,var(--g1),#7EEAB0);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.fl-sub{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:4px}
+.fr{text-align:right;font-size:.76rem;color:rgba(255,255,255,.22)}
+.fr a{color:var(--g-light);text-decoration:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  nav{padding:0 24px}
+  .blog-index{padding:120px 32px 80px}
+  .blog-list{grid-template-columns:1fr 1fr}
+  footer{padding:40px 28px}
+}
+@media(max-width:640px){
+  .blog-list{grid-template-columns:1fr}
+  .nav-links .npill:not(.solid){display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="logo" href="/">
+    <span class="logo-word">Psic</span><span class="logo-dot"></span><span class="logo-word">antil</span>
+  </a>
+  <div class="nav-links">
+    <a class="npill" href="/#blog">Blog</a>
+    <a class="npill" href="/#sobre">Sobre mí</a>
+    <a class="npill" href="/#suscribir">Suscríbete</a>
+    <a class="npill solid" href="/admin">⚙ Admin</a>
+  </div>
+</nav>
+
+<section class="blog-index">
+  <div class="blog-index-hdr">
+    <div class="tag tc">
+      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+      Todas las entradas
+    </div>
+    <h1 class="sh2">El blog de<br><em>Cristina</em></h1>
+  </div>
+
+  <div class="blog-list">
+
+    <!-- Card 1: Desarrollo del lenguaje -->
+    <a class="bc" href="/posts/desarrollo-lenguaje.html">
+      <div class="bc-art" style="background:linear-gradient(135deg,#D4F5E4,#A8EEC8,#6EDBA0)">
+        <svg width="150" height="140" viewBox="0 0 220 200" fill="none">
+          <rect x="16" y="16" width="112" height="78" rx="20" fill="white" opacity=".75" stroke="rgba(14,143,70,.2)" stroke-width="1.5"/>
+          <rect x="18" y="18" width="38" height="5" rx="2.5" fill="rgba(14,143,70,.2)"/>
+          <circle cx="48" cy="55" r="8" fill="#18B860" opacity=".9"/>
+          <circle cx="72" cy="55" r="8" fill="#18B860" opacity=".9"/>
+          <circle cx="96" cy="55" r="8" fill="#18B860" opacity=".9"/>
+          <path d="M30 94 L18 118 L42 104" fill="white" opacity=".75" stroke="rgba(14,143,70,.2)" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="90" y="98" width="112" height="66" rx="18" fill="white" opacity=".8" stroke="rgba(255,184,0,.3)" stroke-width="1.5"/>
+          <circle cx="118" cy="131" r="7" fill="#FFB800" opacity=".9"/>
+          <circle cx="134" cy="131" r="7" fill="#FFB800" opacity=".9"/>
+          <circle cx="150" cy="131" r="7" fill="#FFB800" opacity=".9"/>
+          <path d="M98 164 L110 178 L108 163" fill="white" opacity=".8" stroke="rgba(255,184,0,.3)" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="bc-body">
+        <div class="bc-tag tg-g">Desarrollo del lenguaje</div>
+        <h2 class="bc-title">Desarrollo del lenguaje: orientaciones para favorecer el habla de tu peque desde casa</h2>
+        <p class="bc-exc">Pequeños gestos cotidianos marcan grandes diferencias. Dale su turno, míralo a los ojos, nombra el mundo juntos.</p>
+        <div class="bc-meta"><span>15 Jun 2021</span><span>521 lecturas</span></div>
+      </div>
+    </a>
+
+    <!-- Card 2: Apego seguro -->
+    <a class="bc" href="/posts/apego-seguro.html">
+      <div class="bc-art" style="background:linear-gradient(135deg,#EDE0FF,#C4B0F8,#9B72F5)">
+        <svg width="150" height="140" viewBox="0 0 150 160" fill="none">
+          <circle cx="52" cy="58" r="28" fill="white" opacity=".65" stroke="rgba(139,92,246,.2)" stroke-width="1.5"/>
+          <circle cx="98" cy="68" r="22" fill="white" opacity=".55" stroke="rgba(139,92,246,.2)" stroke-width="1.5"/>
+          <path d="M75 66 C75 60 68 57 65 60 C62 63 64 68 75 76 C86 68 88 63 85 60 C82 57 75 60 75 66Z" fill="#FF4060" stroke="white" stroke-width="1.5"/>
+          <path d="M44 88 Q52 108 60 130" stroke="#18B860" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".7"/>
+          <path d="M75 98 L75 135" stroke="#18B860" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".7"/>
+          <path d="M106 88 Q98 108 90 130" stroke="#18B860" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".7"/>
+          <circle cx="60" cy="133" r="5" fill="#22D472" opacity=".8"/>
+          <circle cx="75" cy="137" r="5" fill="#7EEAB0" opacity=".8"/>
+          <circle cx="90" cy="133" r="5" fill="#22D472" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="bc-body">
+        <div class="bc-tag tg-lv">Apego & Vínculo</div>
+        <h2 class="bc-title">¿Sientes lejos a tu peque? Lo que el apego seguro puede cambiar</h2>
+        <p class="bc-exc">El apego es la conexión que se establece entre el niño y su figura de referencia. La base de todo.</p>
+        <div class="bc-meta"><span>8 Feb 2021</span><span>654 lecturas</span></div>
+      </div>
+    </a>
+
+    <!-- Card 3: Rabietas -->
+    <a class="bc" href="/posts/rabietas.html">
+      <div class="bc-art" style="background:linear-gradient(135deg,#FFE8D0,#FFCB99,#FF9A5C)">
+        <svg width="150" height="140" viewBox="0 0 150 160" fill="none">
+          <ellipse cx="75" cy="68" rx="48" ry="33" fill="white" opacity=".65" stroke="rgba(255,115,64,.25)" stroke-width="1.5"/>
+          <ellipse cx="55" cy="58" rx="30" ry="22" fill="white" opacity=".5" stroke="rgba(255,115,64,.15)" stroke-width="1"/>
+          <ellipse cx="90" cy="55" rx="24" ry="18" fill="white" opacity=".5" stroke="rgba(255,115,64,.15)" stroke-width="1"/>
+          <path d="M58 90 L48 114 L62 108 L52 134" stroke="#FFB800" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M84 90 L76 110 L86 106 L78 126" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".75"/>
+          <circle cx="120" cy="38" r="16" fill="#FFB800" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="bc-body">
+        <div class="bc-tag tg-co">Emociones</div>
+        <h2 class="bc-title">Cómo manejar una rabieta sin perder la cabeza</h2>
+        <p class="bc-exc">Las rabietas no son mala conducta. Son neurología. Entiéndelas y deja de sentirte desbordado/a.</p>
+        <div class="bc-meta"><span>21 Sep 2020</span><span>842 lecturas</span></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div>
+    <div class="fl">Psicantil</div>
+    <div class="fl-sub">Psicología Infantil · Cristina Góngora González</div>
+  </div>
+  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="opacity:.35">
+    <circle cx="25" cy="25" r="23" stroke="#22D472" stroke-width="1.5" fill="none"/>
+    <path d="M25 6 Q17 16 17 26 Q17 40 25 44 Q33 40 33 26 Q33 16 25 6Z" fill="#22D472" opacity=".7"/>
+    <path d="M25 6 Q25 30 19 42" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M25 24 Q31 28 33 36" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </svg>
+  <div class="fr">
+    <p>© <span id="footer-year">2025</span> Psicantil · <a href="https://psicantil.com" style="color:inherit;text-decoration:none">psicantil.com</a></p>
+    <p style="margin-top:5px"><a href="/privacidad.html">Política de privacidad</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
