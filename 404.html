@@ -170,6 +170,46 @@ footer{
 @media(max-width:640px){
   .nav-links .npill:not(.solid){display:none}
 }
+
+/* ── COOKIE BANNER ── */
+#cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 800;
+  background: var(--ink);
+  color: white;
+  border-radius: 50px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: .84rem;
+  font-weight: 700;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+  white-space: nowrap;
+  max-width: calc(100vw - 48px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#cookie-banner p { margin: 0; opacity: .85; }
+#cookie-banner a { color: var(--g1); text-decoration: none; }
+#cookie-banner button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: none;
+  background: var(--g0);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: .82rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s;
+}
+#cookie-banner button:hover { background: var(--g1); }
 </style>
 </head>
 <body>
@@ -227,12 +267,32 @@ footer{
   </svg>
   <div class="fr">
     <p>© <span id="footer-year">2025</span> Psicantil · <a href="https://psicantil.com" style="color:inherit;text-decoration:none">psicantil.com</a></p>
-    <p style="margin-top:5px"><a href="/privacidad.html">Política de privacidad</a></p>
+    <p style="margin-top:5px"><a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html" style="color:var(--g-light)">Cookies</a></p>
   </div>
 </footer>
 
+<!-- ══ COOKIE BANNER ══ -->
+<div id="cookie-banner" style="display:none">
+  <p>
+    Psicantil no usa cookies de rastreo. Solo usamos Google Fonts.
+    <a href="/cookies.html">Más info</a>
+  </p>
+  <button onclick="acceptCookies()">Entendido</button>
+</div>
+
 <script>
 document.getElementById('footer-year').textContent = new Date().getFullYear();
+// Cookie consent
+function acceptCookies() {
+  localStorage.setItem('psicantil_cookies', '1');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+if (!localStorage.getItem('psicantil_cookies')) {
+  setTimeout(() => {
+    const b = document.getElementById('cookie-banner');
+    if (b) b.style.display = 'flex';
+  }, 1200);
+}
 </script>
 </body>
 </html>
