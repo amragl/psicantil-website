@@ -18,8 +18,17 @@ function slugify(text) {
 module.exports = withAuth(async function handler(req, res) {
   const { method } = req;
 
-  // GET — list all posts (lightweight, no content)
+  // GET — list all posts, or fetch single post by ?slug=
   if (method === 'GET') {
+    // Single post fetch (includes content)
+    const querySlug = req.query && req.query.slug;
+    if (querySlug) {
+      const post = await kv.get(`post:${querySlug}`);
+      if (!post) return res.status(404).json({ error: 'Artículo no encontrado' });
+      return res.status(200).json({ post });
+    }
+
+    // List all posts (lightweight, no content)
     const slugs = (await kv.get('posts:index')) || [];
     const posts = [];
     for (const slug of slugs) {
