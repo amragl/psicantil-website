@@ -10,7 +10,7 @@
  * Requires: KV_REST_API_URL and KV_REST_API_TOKEN env vars
  */
 
-const { kv } = require('@vercel/kv');
+const { kv } = require('./lib/kv');
 const fs = require('fs');
 const path = require('path');
 
@@ -283,6 +283,7 @@ async function build() {
   }
 
   console.log(`\nBuild complete: ${posts.length} posts generated`);
+  await kv.close();
 }
 
 build().catch(err => {

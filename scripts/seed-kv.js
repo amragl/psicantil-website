@@ -7,7 +7,7 @@
  * Usage: node scripts/seed-kv.js
  */
 
-const { kv } = require('@vercel/kv');
+const { kv } = require('../lib/kv');
 
 const existingPosts = [
   {
@@ -143,6 +143,7 @@ async function seed() {
   console.log('Set settings');
 
   console.log(`\nSeed complete: ${slugs.length} posts, ${categories.length} categories`);
+  await kv.close();
 }
 
 seed().catch(err => {

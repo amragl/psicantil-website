@@ -1,4 +1,4 @@
-const { kv } = require('@vercel/kv');
+const { kv } = require('../../lib/kv');
 const { withAuth } = require('../_utils/auth');
 
 module.exports = withAuth(async function handler(req, res) {
