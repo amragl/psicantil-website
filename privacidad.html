@@ -3,45 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog · Psicantil — Psicología Infantil</title>
-<meta name="description" content="Todas las entradas del blog de Psicantil. Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente por Cristina Góngora González.">
-<link rel="canonical" href="https://psicantil.com/posts/">
+<title>Política de Privacidad · Psicantil</title>
+<meta name="description" content="Política de privacidad de Psicantil.">
+<link rel="canonical" href="https://psicantil.com/privacidad.html">
+<meta name="robots" content="noindex">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Psicantil">
-<meta property="og:title" content="Blog · Psicantil — Psicología Infantil">
-<meta property="og:description" content="Todas las entradas del blog de Psicantil. Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente.">
-<meta property="og:url" content="https://psicantil.com/posts/">
-<meta property="og:image" content="https://psicantil.com/assets/og-image.png">
-<meta property="og:locale" content="es_ES">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog · Psicantil">
-<meta name="twitter:description" content="Artículos de psicología infantil sobre apego, rabietas, lenguaje y crianza consciente.">
-<meta name="twitter:image" content="https://psicantil.com/assets/og-image.png">
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Blog de Psicantil",
-  "url": "https://psicantil.com/posts/",
-  "description": "Artículos de psicología infantil por Cristina Góngora González.",
-  "author": {
-    "@type": "Person",
-    "name": "Cristina Góngora González"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Psicantil",
-    "url": "https://psicantil.com"
-  }
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Kaushan+Script&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=Kaushan+Script&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --paper:     #F5F0E8;
@@ -108,31 +77,50 @@ nav{
 }
 .npill.solid:hover{background:var(--g2);border-color:var(--g2);box-shadow:0 6px 24px rgba(14,143,70,.35)}
 
-/* ── BUTTONS ── */
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:15px 34px;border-radius:50px;
-  font-family:'Nunito',sans-serif;font-weight:900;font-size:.94rem;
-  border:2px solid transparent;
-  transition:all .25s;position:relative;overflow:hidden;
+/* ── LEGAL PAGE ── */
+.legal-main {
+  padding-top: 68px;
+  background: var(--paper);
+  min-height: 100vh;
 }
-.btn::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.35) 50%,transparent 62%);
-  transform:translateX(-120%);transition:transform .55s;
+.legal-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 32px 120px;
 }
-.btn:hover::after{transform:translateX(120%)}
-.btn-g{
-  background:linear-gradient(135deg,var(--g1),var(--g0));
-  color:white;border-color:var(--g0);
-  box-shadow:0 6px 24px rgba(24,184,96,.3),0 2px 8px rgba(24,184,96,.2);
+.legal-h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -.05em;
+  color: var(--ink);
+  margin: 16px 0 8px;
 }
-.btn-g:hover{box-shadow:0 10px 36px rgba(24,184,96,.4),0 4px 16px rgba(24,184,96,.25);transform:translateY(-3px)}
-.btn-outline{
-  border-color:var(--border);color:var(--ink);background:var(--card);
-  box-shadow:0 2px 12px var(--shadow);
+.legal-updated {
+  font-size: .82rem;
+  color: var(--ink3);
+  margin-bottom: 52px;
 }
-.btn-outline:hover{border-color:var(--g0);color:var(--g0);box-shadow:0 6px 20px var(--shadow-m);transform:translateY(-3px)}
+.legal-body h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: var(--ink);
+  letter-spacing: -.03em;
+  margin: 48px 0 14px;
+}
+.legal-body p, .legal-body li {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink2);
+  margin-bottom: 16px;
+}
+.legal-body ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+.legal-body a { color: var(--g0); }
+.legal-body strong { color: var(--ink); }
 
 /* ── TAGS ── */
 .tag{
@@ -142,53 +130,6 @@ nav{
   border:1.5px solid currentColor;margin-bottom:18px;
 }
 .tg{color:var(--g0);background:var(--g-pale)}
-.tc{color:var(--coral);background:rgba(255,64,96,.07)}
-
-.sh2{
-  font-family:'Fraunces',serif;font-weight:900;
-  font-size:clamp(2.4rem,3.8vw,3.8rem);
-  line-height:.97;letter-spacing:-.05em;color:var(--ink);
-}
-.sh2 em{
-  font-style:italic;
-  background:linear-gradient(135deg,var(--g0),#22D472);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-
-/* ── BLOG INDEX ── */
-.blog-index{
-  padding:140px 60px 100px;
-  max-width:1260px;margin:0 auto;
-}
-.blog-index-hdr{margin-bottom:52px}
-
-.blog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-
-.bc{
-  border-radius:24px;overflow:hidden;
-  background:var(--card);border:1.5px solid var(--border);
-  box-shadow:0 4px 20px var(--shadow);
-  transition:transform .28s,box-shadow .28s;
-  position:relative;text-decoration:none;color:inherit;display:block;
-}
-.bc:hover{
-  transform:translateY(-10px);
-  box-shadow:0 20px 50px var(--shadow-lg);
-}
-.bc-art{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;height:190px}
-.bc-art::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 55%,rgba(255,255,255,.25));
-}
-.bc-body{padding:26px}
-.bc-tag{font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
-.bc-tag.tg-g{color:var(--g0)}.bc-tag.tg-lv{color:var(--lav)}.bc-tag.tg-co{color:var(--coral)}.bc-tag.tg-sk{color:var(--sky)}.bc-tag.tg-su{color:var(--sun)}
-.bc-title{
-  font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;
-  color:var(--ink);line-height:1.32;margin-bottom:10px;letter-spacing:-.02em;
-}
-.bc-exc{font-size:.84rem;line-height:1.7;color:var(--ink2);margin-bottom:16px}
-.bc-meta{display:flex;gap:14px;font-size:.73rem;color:var(--ink3)}
 
 /* ── FOOTER ── */
 footer{
@@ -205,18 +146,6 @@ footer{
 .fl-sub{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:4px}
 .fr{text-align:right;font-size:.76rem;color:rgba(255,255,255,.22)}
 .fr a{color:var(--g-light);text-decoration:none}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1060px){
-  nav{padding:0 24px}
-  .blog-index{padding:120px 32px 80px}
-  .blog-list{grid-template-columns:1fr 1fr}
-  footer{padding:40px 28px}
-}
-@media(max-width:640px){
-  .blog-list{grid-template-columns:1fr}
-  .nav-links .npill:not(.solid){display:none}
-}
 
 /* ── COOKIE BANNER ── */
 #cookie-banner {
@@ -257,6 +186,15 @@ footer{
   transition: background .2s;
 }
 #cookie-banner button:hover { background: var(--g1); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  nav{padding:0 24px}
+  footer{padding:40px 28px}
+}
+@media(max-width:640px){
+  .nav-links .npill:not(.solid){display:none}
+}
 </style>
 </head>
 <body>
@@ -272,19 +210,48 @@ footer{
   </div>
 </nav>
 
-<section class="blog-index">
-  <div class="blog-index-hdr">
-    <div class="tag tc">
-      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
-      Todas las entradas
-    </div>
-    <h1 class="sh2">El blog de<br><em>Cristina</em></h1>
-  </div>
+<main class="legal-main">
+  <div class="legal-body">
+    <div class="tag tg">⚖️ Legal</div>
+    <h1 class="legal-h1">Política de Privacidad</h1>
+    <p class="legal-updated">Última actualización: enero 2025</p>
 
-  <div class="blog-list">
-{{cards}}
+    <h2>1. Responsable del tratamiento</h2>
+    <p>
+      <strong>Cristina Góngora González</strong><br>
+      Sitio web: psicantil.com<br>
+      Contacto: <a href="mailto:hola@psicantil.com">hola@psicantil.com</a>
+    </p>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>Psicantil recopila únicamente los datos que tú nos proporcionas voluntariamente:</p>
+    <ul>
+      <li><strong>Suscripción al newsletter:</strong> tu dirección de correo electrónico.</li>
+      <li><strong>Contacto directo:</strong> los datos que compartas si te pones en contacto por email.</li>
+    </ul>
+    <p>No recopilamos datos de navegación, no usamos cookies de seguimiento y no instalamos herramientas de analítica de terceros.</p>
+
+    <h2>3. Finalidad y base legal</h2>
+    <p>Tratamos tu email con la única finalidad de enviarte el newsletter de Psicantil: artículos sobre psicología infantil y crianza consciente.</p>
+    <p>La base legal es tu <strong>consentimiento explícito</strong> (art. 6.1.a del RGPD), que otorgas al suscribirte.</p>
+
+    <h2>4. Destinatarios</h2>
+    <p>Tus datos se almacenan en <strong>Resend</strong> (resend.com), nuestro proveedor de envío de email, con servidores en la Unión Europea. No cedemos tus datos a ningún tercero con fines comerciales.</p>
+
+    <h2>5. Plazo de conservación</h2>
+    <p>Conservamos tu email mientras permanezcas suscrita/o. Si te das de baja, tus datos se eliminan de nuestra lista de forma inmediata.</p>
+
+    <h2>6. Tus derechos</h2>
+    <p>Tienes derecho a acceder, rectificar, suprimir, oponerte al tratamiento y solicitar la portabilidad de tus datos. Para ejercer cualquiera de estos derechos, escríbenos a <a href="mailto:hola@psicantil.com">hola@psicantil.com</a>.</p>
+    <p>También puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (aepd.es) si consideras que el tratamiento no es conforme al RGPD.</p>
+
+    <h2>7. Cancelar suscripción</h2>
+    <p>Puedes darte de baja en cualquier momento haciendo clic en el enlace "Cancelar suscripción" que aparece al pie de cada email que te enviamos.</p>
+
+    <h2>8. Cambios en esta política</h2>
+    <p>Si realizamos cambios relevantes en esta política, te lo comunicaremos por email. La fecha de última actualización aparece al inicio de este documento.</p>
   </div>
-</section>
+</main>
 
 <!-- ══ FOOTER ══ -->
 <footer>
