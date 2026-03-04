@@ -7,7 +7,7 @@
  * 3. Updates blog cards + posts[] array in index.html
  *
  * Run: node build.js
- * Requires: KV_REST_API_URL and KV_REST_API_TOKEN env vars
+ * Requires: KV_URL or a *REDIS_URL env var (see lib/kv.js)
  */
 
 const { kv } = require('./lib/kv');
@@ -97,7 +97,7 @@ function generateListingCard(post) {
   const excerpt = post.description || (post.content || '').split('\n\n')[0].substring(0, 120) + '...';
 
   return `    <!-- Card: ${escHtml(post.title)} -->
-    <a class="bc" href="/posts/${post.slug}.html">
+    <a class="bc" href="/posts/${escHtml(post.slug)}.html">
       <div class="bc-art" style="background:${post.gradient || 'linear-gradient(135deg,#D4F5E4,#A8EEC8,#6EDBA0)'}">
         ${post.svgIllustration || defaultSvg('small')}
       </div>
@@ -138,7 +138,7 @@ function generateHomepageCard(post, index) {
 function generatePostsArray(posts) {
   const items = posts.map(p => {
     const content = (p.content || '').replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-    return `  {tag:'${escHtml(p.category)}',col:'${p.gradient || ''}',views:${p.views || 0},date:'${escHtml(p.dateDisplay || '')}',
+    return `  {tag:'${escHtml(p.category)}',col:'${(p.gradient || '').replace(/'/g, "\\'")}',views:${p.views || 0},date:'${escHtml(p.dateDisplay || '')}',
    title:'${escHtml(p.title).replace(/'/g, "\\'")}',
    content:\`${content}\`}`;
   });
@@ -231,6 +231,7 @@ async function build() {
 
   if (posts.length === 0) {
     console.log('No published posts found. Skipping build.');
+    await kv.close();
     return;
   }
 
