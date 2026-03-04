@@ -846,6 +846,7 @@ async function toggleFeatured(slug, val) {
       body: JSON.stringify({ slug, featured: val }),
     });
     toast(val ? 'Destacado' : 'Destacado quitado');
+    autoDeploy();
     loadPosts();
   } catch (e) {
     toast('Error: ' + e.message);
@@ -859,6 +860,7 @@ async function togglePublished(slug, val) {
       body: JSON.stringify({ slug, published: val }),
     });
     toast(val ? 'Publicado' : 'Cambiado a borrador');
+    autoDeploy();
     loadPosts();
   } catch (e) {
     toast('Error: ' + e.message);
@@ -894,6 +896,7 @@ async function doDelete(slug, overlay) {
     });
     overlay.remove();
     toast('Artículo eliminado');
+    autoDeploy();
     loadPosts();
   } catch (e) {
     toast('Error: ' + e.message);
@@ -1052,6 +1055,7 @@ async function savePost(publish) {
       editingSlug = slug;
       toast(publish ? 'Artículo creado y publicado' : 'Borrador creado');
     }
+    if (publish) autoDeploy();
     // Reload editor with saved data
     document.getElementById('editor-title').textContent = 'Editar artículo';
     location.hash = 'edit/' + editingSlug;
@@ -1255,6 +1259,13 @@ async function triggerDeploy() {
   } catch (e) {
     toast('Error: ' + e.message);
   }
+}
+
+/** Auto-deploy after mutations that affect the live site. */
+function autoDeploy() {
+  api('/deploy', { method: 'POST' })
+    .then(() => toast('Despliegue automático iniciado'))
+    .catch(() => {}); // silent fail — manual deploy still available
 }
 
 /* ── MOBILE SIDEBAR ── */
