@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -11,7 +12,10 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Contraseña requerida' });
   }
 
-  if (password !== process.env.ADMIN_PASSWORD) {
+  const expected = process.env.ADMIN_PASSWORD || '';
+  const pwBuf = Buffer.from(String(password));
+  const expBuf = Buffer.from(expected);
+  if (pwBuf.length !== expBuf.length || !crypto.timingSafeEqual(pwBuf, expBuf)) {
     return res.status(401).json({ error: 'Contraseña incorrecta' });
   }
 
