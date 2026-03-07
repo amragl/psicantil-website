@@ -119,7 +119,7 @@ function generateHomepageCard(post, index) {
   const svgSize = isBig ? 'large' : 'small';
 
   return `    <!-- Card: ${escHtml(post.title)} -->
-    <div class="bc${isBig ? ' big' : ''} rev" onclick="openPost(${index})" data-href="/posts/${escHtml(post.slug)}.html" tabindex="0" role="button" aria-label="Leer: ${escHtml(post.title)}" onkeydown="if(event.key==='Enter'||event.key===' '){openPost(${index})}" style="transition-delay:${delay}s;cursor:none">
+    <div class="bc${isBig ? ' big' : ''} rev" onclick="openPost(${index})" data-href="/posts/${escHtml(post.slug)}.html" tabindex="0" role="button" aria-label="Leer: ${escHtml(post.title)}" onkeydown="if(event.key==='Enter'||event.key===' '){openPost(${index})}" style="transition-delay:${delay}s">
       <div class="bc-art" style="background:${post.gradient || 'linear-gradient(135deg,#D4F5E4,#A8EEC8,#6EDBA0)'}">
         ${post.svgIllustration || defaultSvg(svgSize)}
       </div>
